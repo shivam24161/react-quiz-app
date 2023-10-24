@@ -18,15 +18,12 @@ const Quiz = () => {
     setIndexVisible,
     loading,
   } = useContext(QuizContext);
-
   const getNextOption = () => {
     setIndexVisible((indexVisible) => indexVisible + 1);
   };
-
   const getPreviousoption = () => {
     setIndexVisible((indexVisible) => indexVisible - 1);
   };
-
   const saveAnswer = (key) => {
     const answer = {
       selected_id: indexVisible,
@@ -38,11 +35,9 @@ const Quiz = () => {
     );
     setSelected([...newSelected, answer]);
   };
-
   const handleSubmit = () => {
     navigate("/result");
   };
-
   const handleCategory = (e) => {
     const val = e.split(",");
     setSortByCategory(e);
@@ -67,30 +62,8 @@ const Quiz = () => {
     });
     setData([...newData]);
   };
-
   return (
     <div className="chingu-quiz__container">
-      <div className="chingu-quiz__number-container">
-        <p>
-          Ques- {indexVisible + 1}/{data?.length}
-        </p>
-        <select
-          className="select-box"
-          onChange={(e) => handleCategory(e.target.value)}
-          value={sortByCategory}
-        >
-          <option value="mixed">Mixed</option>
-          <option value={["html", "css", "javascript"]}>html-css-js</option>
-          <option value={["javascript", "css", "html"]}>js-css-html</option>
-          <option value={["html", "javascript", "css"]}>html-js-css</option>
-          <option value={["css", "html", "javascript"]}>css-html-js</option>
-        </select>
-        {indexVisible === data?.length - 1 && (
-          <button className="chingu-submit-btn" onClick={handleSubmit}>
-            Submit
-          </button>
-        )}
-      </div>
       {loading ? (
         <ThreeDots
           height="80"
@@ -104,6 +77,27 @@ const Quiz = () => {
         />
       ) : (
         <>
+          <div className="chingu-quiz__number-container">
+            <p>
+              Ques- {indexVisible + 1}/{data?.length}
+            </p>
+            <select
+              className="select-box"
+              onChange={(e) => handleCategory(e.target.value)}
+              value={sortByCategory}
+            >
+              <option value="mixed">Mixed</option>
+              <option value={["html", "css", "javascript"]}>html-css-js</option>
+              <option value={["javascript", "css", "html"]}>js-css-html</option>
+              <option value={["html", "javascript", "css"]}>html-js-css</option>
+              <option value={["css", "html", "javascript"]}>css-html-js</option>
+            </select>
+            {indexVisible === data?.length - 1 && (
+              <button className="chingu-submit-btn" onClick={handleSubmit}>
+                Submit
+              </button>
+            )}
+          </div>
           <h2 className="chingu-quiz__question">
             {data[indexVisible]?.question}
           </h2>
@@ -154,5 +148,4 @@ const Quiz = () => {
     </div>
   );
 };
-
 export default Quiz;

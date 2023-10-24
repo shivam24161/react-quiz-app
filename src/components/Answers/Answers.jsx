@@ -7,13 +7,11 @@ import "./Answers.css";
 const Answers = () => {
   const navigate = useNavigate();
   const { data, selected } = useContext(QuizContext);
-
   useEffect(() => {
-    if (data.length === 0) {
+    if (data?.length === 0) {
       navigate("/");
     }
   }, [data, navigate]);
-
   return (
     <div className="answers-container">
       <div className="chingu-answer-heading__container">

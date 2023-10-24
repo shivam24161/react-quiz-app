@@ -12,3 +12,12 @@ button {
   margin: 0 auto;
   height: 100vh;
 }
+.scroll-to-top {
+  padding: 2px 4px;
+  background: #007bff;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+}

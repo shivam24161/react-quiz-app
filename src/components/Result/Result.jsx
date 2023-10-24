@@ -8,13 +8,11 @@ const Result = () => {
   const { data, selected, setSelected, setIndexVisible } =
     useContext(QuizContext);
   const answer = selected.filter((ele) => ele.opt === ele.ans);
-
   useEffect(() => {
-    if (data.length === 0) {
+    if (data?.length === 0) {
       navigate("/");
     }
   }, [data, navigate]);
-
   return (
     <div className="chingu-result__container">
       <h3 className="chingu-result-heading">Result:</h3>
