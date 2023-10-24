@@ -1,0 +1,14 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+button {
+  cursor: pointer;
+}
+.chingu-quiz__wrapper {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  height: 100vh;
+}

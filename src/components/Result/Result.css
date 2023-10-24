@@ -1,0 +1,43 @@
+.chingu-result__container {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.chingu-result-heading {
+  font-size: 22px;
+  text-decoration: underline;
+}
+.chingu-result__list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+.chingu-result__list li {
+  font-size: 18px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.chingu-back-btn,
+.chinu-see-answers {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  text-decoration: none;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+.chingu-back-btn:hover,
+.chinu-see-answers:hover {
+  background-color: #0056b3;
+}

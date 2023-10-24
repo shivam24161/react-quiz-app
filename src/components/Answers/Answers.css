@@ -1,0 +1,64 @@
+.answers-container {
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.chingu-answer-heading__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.chingu-answer-heading {
+  font-size: 24px;
+  margin: 0;
+}
+.back-to-result-link {
+  color: #007bff;
+  font-size: 18px;
+  margin-left: 10px;
+}
+.chingu-quiz-note {
+  font-size: 16px;
+  margin: 20px 0;
+}
+.chingu-quiz-note span:first-child {
+  color: #2c5f33;
+}
+.chingu-quiz-note span:nth-child(2) {
+  color: #e15151;
+}
+.question-container {
+  border: 1px solid #d1d1d1;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+.chingu-question {
+  font-weight: 500;
+  font-size: 20px;
+  margin: 0;
+}
+.chingu-answer__list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+.answer-option {
+  font-size: 16px;
+  margin: 5px 0;
+  padding: 5px;
+  border-radius: 5px;
+}
+.chingu-ans-selected--correct {
+  background-color: #c2e0c6;
+}
+.chingu-ans-selected--wrong {
+  background-color: #f0b3b3;
+}
+.chingu-correct-answer {
+  color: #007bff;
+  font-weight: 500;
+  font-size: 16px;
+  margin: 10px 0;
+}
