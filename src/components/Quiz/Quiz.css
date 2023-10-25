@@ -51,6 +51,7 @@
   margin: 20px;
 }
 .chingu-quiz__question {
+  word-wrap: break-word;
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -100,4 +101,10 @@
 .chingu-btn--disabled {
   background-color: #ccc;
   cursor: not-allowed;
+}
+@media only screen and (max-width: 600px) {
+  .chingu-quiz__question {
+    font-size: 18px;
+    font-weight: 600;
+  }
 }
